@@ -19,7 +19,7 @@ Once you are familiarized with it, you can do the following exercises (no specif
 We provide solutions for the exercises in the case you have troubles while doing them or just want
 to compare your approach with another possible implementation:  
 
-* Solution 0: Hello World *(TO DO)*
-* Solution 1: HTML DSL, POST and Sessions *(TO DO)*
-* Solution 2: Typed Routes and Asynchronous Code *(TO DO)*
-* Solution 3: Creating a Reverse Proxy *(TO DO)*
+* [Solution 0: Hello World](/solutions/exercise0)
+* [Solution 1: HTML DSL, POST and Sessions](/solutions/exercise1)
+* [Solution 2: Typed Routes and Asynchronous Code](/solutions/exercise2)
+* [Solution 3: Creating a Reverse Proxy](/solutions/exercise3)

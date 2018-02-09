@@ -1,6 +1,6 @@
 # Exercise 1: HTML DSL, POST and Sessions
 
-Using [Hello World](/exercises/exercise0-hello-world.md) as base, create a `GET /login` route with a HTML form
+Using [Hello World](/exercises/exercise0-hello-world.md) as base, create a `GET /login` route with an HTML form
 requesting user and password, and a `POST /login` route that adds the user name to the session in the case
 `user == password` while redirecting to `/`, or displaying an error if user and password are not the same. Also
 you should modify `GET /` to display `Hello $user` in the case there is an user in the session or `Hello World`

@@ -4,3 +4,5 @@
 *.ipr
 *.iws
 *.iml
+/solutions/exercise?/out
+/solutions/exercise?/build
