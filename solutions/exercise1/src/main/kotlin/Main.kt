@@ -7,6 +7,7 @@ import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.sessions.*
+import io.ktor.util.*
 import kotlinx.html.*
 
 fun main(args: Array<String>) {
@@ -15,7 +16,7 @@ fun main(args: Array<String>) {
             cookie<MySession>("EXERCISE1_SESSION", SessionStorageMemory())
         }
         routing {
-            rootRoute()
+            homeRoute()
             loginRoute()
         }
     }
@@ -24,22 +25,13 @@ fun main(args: Array<String>) {
 
 data class MySession(val user: String)
 
-fun Routing.rootRoute() {
+fun Routing.homeRoute() {
     get("/") {
         val session = call.sessions.get<MySession>()
         call.respondHtml {
             body {
                 h1 {
-                    // Alternatively:
-                    //+"Hello ${(session?.user ?: "World").escapeHTML()}!"
-
-                    +"Hello "
-                    if (session != null) {
-                        +session.user
-                    } else {
-                        +"World"
-                    }
-                    +"!"
+                    + "Hello ${(session?.user ?: "World!").escapeHTML()}"
                 }
             }
         }
