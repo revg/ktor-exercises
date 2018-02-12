@@ -10,9 +10,13 @@ import kotlinx.html.*
 import java.time.*
 import java.util.*
 
+
+val Number.ms get() = Duration.ofMillis(this.toLong())
+
+
 fun main(args: Array<String>) {
     val server = embeddedServer(Netty, port = 8080) {
-        val movieRepository = DelayedMovieRepository(DummyMovieRepository, delay = 2000.milliseconds)
+        val movieRepository = DelayedMovieRepository(DummyMovieRepository, delay = 2000.ms)
         install(Locations)
         install(StatusPages) {
             this.exception<NoSuchElementException> {
@@ -31,8 +35,6 @@ fun main(args: Array<String>) {
     }
     server.start(wait = true)
 }
-
-val Number.milliseconds get() = Duration.ofMillis(this.toLong())
 
 @Location("/")
 object RootLocation

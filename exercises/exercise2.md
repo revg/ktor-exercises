@@ -1,17 +1,15 @@
 # Exercise 2: HTML DSL, Typed Routes and Asynchronous Code
 
-Create a simple asynchronous interface using **suspend** functions to retrieve a list of movies and a movie summaries.
-And a simple implementation returning constant values and simulating database/API latency creating
-a non-blocking **delay** when using that interface.
+This exercise will teach you how to:
 
-Create an HTML unordererd list using kotlinx.html DSL with movie listing in `GET /` route.
-
-Create a `/movie/{name}` route displaying movie's summary or a page returning HTTP 404 error code when not found.
-
-Use `@Location data class` to build and handle routes in a typed way.  
+* Create a simple asynchronous interface using **suspend** functions to retrieve a list of movies and a movie summaries
+* And a simple implementation returning constant values and simulating database/API latency creating a non-blocking **delay** when using that interface.
 
 ## Proposed steps for this exercise:
 
+* Create an HTML unordererd list using kotlinx.html DSL with movie listing in `GET /` route.
+* Create a `/movie/{name}` route displaying movie's summary or a page returning HTTP 404 error code when not found.
+* Use `@Location data class` to build and handle routes in a typed way.
 * Create `interface MovieRepository { suspend fun getMovieNames(): List<String>; suspend fun getMovieSummary(name: String): String }`
 * Create a class that implements that interface returning fake results: `return listOf()`, and `return when (name) { ... }`
 * Add a delay of 4000 milliseconds to each call in that class or in a separate class DelayedMovieRepository(val original: MovieRepository) : MovieRepository

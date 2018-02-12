@@ -1,6 +1,7 @@
 import java.time.*
 
-class DelayedMovieRepository(val base: MovieRepository, val delay: Duration = 4000.milliseconds) : MovieRepository {
+
+class DelayedMovieRepository(val base: MovieRepository, val delay: Duration = 4000.ms) : MovieRepository {
     private suspend fun intercept(method: String, args: Array<Any?>): MovieRepository {
         kotlinx.coroutines.experimental.time.delay(delay)
         return base
