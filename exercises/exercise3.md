@@ -1,5 +1,7 @@
 # Exercise 3: Creating a Reverse Proxy
 
+This exercise will teach you how to:
+
 Create a Reverse Proxy that intercepts all requests, uses Ktor's HTTP client to mimic those requests to wikipedia and
 sends the retrieved content to the client unmodified or replacing relevant URLs for html content.
 
