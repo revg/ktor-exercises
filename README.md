@@ -2,22 +2,24 @@
 
 ## Exercises
 
-To get started, you can start doing a `Hello World` application to familiarize yourself with the basic structure
-of a Ktor application. We provide a basic skeleton in [/exercises/skeleton](/exercises/skeleton) for you to
-get started:
+The following are a serie of exercises to get your familiar with Kotlin and Ktor. It's assumed you have a basic understanding of Kotlin and know how to work with Gradle.
+Each exercises builds on the previous one, starting with the very basics of `Hello World`. 
+
+To get you up and running easily, a sample `build.gradle` file is provided with all the required dependencies for Ktor and Kotlin. You can import it into your favourite IDE and start
+building the exercises on that. 
+
+
+A sample solution is provided for each exercises in the `/solutions` folder.
+
  
 * [Exercise 0: Hello World](/exercises/exercise0-hello-world.md)
-
-Once you are familiarized with it, you can do the following exercises (no specific order required):
-
 * [Exercise 1: HTML DSL, POST and Sessions](/exercises/exercise1.md)
 * [Exercise 2: HTML DSL, Typed Routes and Asynchronous Code](/exercises/exercise2.md)
 * [Exercise 3: Creating a Reverse Proxy](/exercises/exercise3.md)
 
 ## Solutions
 
-We provide solutions for the exercises in the case you have troubles while doing them or just want
-to compare your approach with another possible implementation:  
+Below are the solutions for the exercises. Note that your solution doesn't need to exactly match what's presented here. As long as it's generally inline and works, you should be good!
 
 * [Solution 0: Hello World](/solutions/exercise0)
 * [Solution 1: HTML DSL, POST and Sessions](/solutions/exercise1)
