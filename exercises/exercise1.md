@@ -1,5 +1,9 @@
 # Exercise 1: HTML DSL, POST and Sessions
 
+This exercise teaches you how to render a form using [kotlinx.html](https://github.com/Kotlin/kotlinx.html), as well parse input from
+both a POST and a GET verb, along with storing information in a `session` object.
+
+
 Using [Hello World](/exercises/exercise0-hello-world.md) as base, create a `GET /login` route with an HTML form
 requesting user and password, and a `POST /login` route that adds the user name to the session in the case
 `user == password` while redirecting to `/`, or displaying an error if user and password are not the same. Also

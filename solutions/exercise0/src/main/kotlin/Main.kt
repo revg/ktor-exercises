@@ -1,10 +1,9 @@
 import io.ktor.application.*
-import io.ktor.html.*
+import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import kotlinx.html.*
 
 fun main(args: Array<String>) {
     val server = embeddedServer(Netty, port = 8080) {
@@ -24,10 +23,6 @@ fun Routing.plainTextRoute() {
 
 fun Routing.htmlRoute() {
     get("/html") {
-        call.respondHtml {
-            body {
-                h1 { +"Hello World!" }
-            }
-        }
+        call.respondText("<h1>Hello World!</h1>", contentType = ContentType.Text.Html)
     }
 }
