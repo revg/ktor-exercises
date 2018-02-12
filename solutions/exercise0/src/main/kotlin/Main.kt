@@ -9,15 +9,15 @@ import kotlinx.html.*
 fun main(args: Array<String>) {
     val server = embeddedServer(Netty, port = 8080) {
         routing {
-            rootRoute()
+            plainTextRoute()
             htmlRoute()
         }
     }
     server.start(wait = true)
 }
 
-fun Routing.rootRoute() {
-    get("/") {
+fun Routing.plainTextRoute() {
+    get("/plain") {
         call.respondText("Hello World!")
     }
 }
