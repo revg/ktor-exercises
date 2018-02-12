@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
             }
         }
         routing {
-            rootRoute(movieRepository)
+            homeRoute(movieRepository)
             movieRoute(movieRepository)
         }
     }
@@ -40,7 +40,7 @@ object RootLocation
 @Location("/movie/{name}")
 data class MovieLocation(val name: String)
 
-fun Routing.rootRoute(movieRepository: MovieRepository) {
+fun Routing.homeRoute(movieRepository: MovieRepository) {
     get<RootLocation> {
         val movies = movieRepository.getMovieNames()
 
