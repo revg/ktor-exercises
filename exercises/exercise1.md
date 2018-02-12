@@ -7,12 +7,6 @@ This exercise teaches you how to:
 * Parse input from requests (both query fields via GET and body content using POST).
 * Use the **session** object to store session information.
 
-
-requesting user and password, and a `POST /login` route that adds the user name to the session in the case
-`username == password` while redirecting to `/`, or displaying an error if user and password are not the same. Also
-you should modify `GET /` to display `Hello $user` in the case there is an user in the session or `Hello World`
-if no session or no user is specified in the session.
-
 ## Proposed steps for this exercise:
 
 * Create a route that responds to a GET request to the path `/login`, returning an HTML form using **kotlinx.html**. The form should contain two input fields: user, password and a submit button with action POST `/login`.
