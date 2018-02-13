@@ -79,4 +79,24 @@ fun Routing.loginRoute() {
             }
         }
     }
+
+    // Version using authentication feature
+    /*
+    route("/login", HttpMethod.Post) {
+        authentication {
+            formAuthentication("username", "password", FormAuthChallenge.Redirect { call, credentials -> "/login" }) { credentials ->
+                if (credentials.name == credentials.password) {
+                    UserIdPrincipal(credentials.name)
+                } else {
+                    null
+                }
+            }
+        }
+        post {
+            val principal = call.authentication.principal<UserIdPrincipal>()
+            call.sessions.set(MySession(principal!!.name))
+            call.respondRedirect("/")
+        }
+    }
+    */
 }
