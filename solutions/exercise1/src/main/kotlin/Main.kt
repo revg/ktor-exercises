@@ -31,7 +31,10 @@ fun Routing.homeRoute() {
         call.respondHtml {
             body {
                 h1 {
-                    + "Hello ${(session?.user ?: "World!").escapeHTML()}"
+                    +"Hello ${(session?.user ?: "World!").escapeHTML()}"
+                }
+                p {
+                    a(href = "/login") { +"Login" }
                 }
             }
         }
@@ -45,11 +48,11 @@ fun Routing.loginRoute() {
                 form(action = "/login", encType = FormEncType.applicationXWwwFormUrlEncoded, method = FormMethod.post) {
                     div {
                         +"Username:"
-                        textInput(name = "username") {  }
+                        textInput(name = "username") { }
                     }
                     div {
                         +"Password:"
-                        passwordInput(name = "password") {  }
+                        passwordInput(name = "password") { }
                     }
                     div {
                         submitInput()
@@ -58,6 +61,7 @@ fun Routing.loginRoute() {
             }
         }
     }
+
     post("/login") {
         val post = call.receiveOrNull() ?: Parameters.Empty
         val username = post["username"]
@@ -75,4 +79,24 @@ fun Routing.loginRoute() {
             }
         }
     }
+
+    // Version using authentication feature
+    /*
+    route("/login", HttpMethod.Post) {
+        authentication {
+            formAuthentication("username", "password", FormAuthChallenge.Redirect { call, credentials -> "/login" }) { credentials ->
+                if (credentials.name == credentials.password) {
+                    UserIdPrincipal(credentials.name)
+                } else {
+                    null
+                }
+            }
+        }
+        post {
+            val principal = call.authentication.principal<UserIdPrincipal>()
+            call.sessions.set(MySession(principal!!.name))
+            call.respondRedirect("/")
+        }
+    }
+    */
 }
