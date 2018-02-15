@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     embeddedServer(
         Netty,
         port = 8080,
-        watchPaths = listOf("io.ktor.exercise4"),
+        watchPaths = listOf("solutions/exercise4"),
         module = Application::mymodule
     ).start(wait = true)
 }
