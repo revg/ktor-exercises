@@ -16,6 +16,7 @@ A sample solution is provided for each exercises in the `/solutions` folder.
 * [Exercise 1: HTML DSL, POST and Sessions](/exercises/exercise1.md)
 * [Exercise 2: HTML DSL, Typed Routes and Asynchronous Code](/exercises/exercise2.md)
 * [Exercise 3: Creating a Reverse Proxy](/exercises/exercise3.md)
+* [Exercise 4: Autoreload](/exercises/exercise4.md)
 
 ## Solutions
 
@@ -25,3 +26,4 @@ Below are the solutions for the exercises. Note that your solution doesn't need 
 * [Solution 1: HTML DSL, POST and Sessions](/solutions/exercise1)
 * [Solution 2: Typed Routes and Asynchronous Code](/solutions/exercise2)
 * [Solution 3: Creating a Reverse Proxy](/solutions/exercise3)
+* [Solution 3: Autoreload](/solutions/exercise4)
