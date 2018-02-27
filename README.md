@@ -12,7 +12,7 @@ building the exercises on that.
 A sample solution is provided for each exercises in the `/solutions` folder.
 
  
-* [Exercise 0: Hello World](/exercises/exercise0-hello-world.md)
+* [Exercise 0: Hello World](/exercises/exercise0.md)
 * [Exercise 1: HTML DSL, POST and Sessions](/exercises/exercise1.md)
 * [Exercise 2: HTML DSL, Typed Routes and Asynchronous Code](/exercises/exercise2.md)
 * [Exercise 3: Creating a Reverse Proxy](/exercises/exercise3.md)
